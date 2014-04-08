@@ -19,6 +19,8 @@
 		4F0D1DC318ECB58700C00942 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0D1DC118ECB58700C00942 /* MainStoryboard_iPhone.storyboard */; };
 		4F0D1DC618ECB58700C00942 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0D1DC418ECB58700C00942 /* MainStoryboard_iPad.storyboard */; };
 		4F0D1DC918ECB58700C00942 /* DoToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0D1DC818ECB58700C00942 /* DoToDoViewController.m */; };
+		73B6B7FA18F4A48900A2BE2D /* ToDoStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B6B7F918F4A48900A2BE2D /* ToDoStore.m */; };
+		73DE1A9D18F4A36300E23141 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73DE1A9C18F4A36300E23141 /* CoreData.framework */; };
 		F215A72318F34C1A00DD6DD2 /* AddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F215A72218F34C1A00DD6DD2 /* AddTaskViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,9 @@
 		4F0D1DC518ECB58700C00942 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		4F0D1DC718ECB58700C00942 /* DoToDoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoToDoViewController.h; sourceTree = "<group>"; };
 		4F0D1DC818ECB58700C00942 /* DoToDoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoToDoViewController.m; sourceTree = "<group>"; };
+		73B6B7F818F4A48900A2BE2D /* ToDoStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoStore.h; sourceTree = "<group>"; };
+		73B6B7F918F4A48900A2BE2D /* ToDoStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoStore.m; sourceTree = "<group>"; };
+		73DE1A9C18F4A36300E23141 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F215A72118F34C1A00DD6DD2 /* AddTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTaskViewController.h; sourceTree = "<group>"; };
 		F215A72218F34C1A00DD6DD2 /* AddTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTaskViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73DE1A9D18F4A36300E23141 /* CoreData.framework in Frameworks */,
 				4F0D1DAA18ECB58700C00942 /* UIKit.framework in Frameworks */,
 				4F0D1DAC18ECB58700C00942 /* Foundation.framework in Frameworks */,
 				4F0D1DAE18ECB58700C00942 /* CoreGraphics.framework in Frameworks */,
@@ -61,6 +67,7 @@
 		4F0D1D9D18ECB58700C00942 = {
 			isa = PBXGroup;
 			children = (
+				73DE1A9C18F4A36300E23141 /* CoreData.framework */,
 				4F0D1DAF18ECB58700C00942 /* DoToDo */,
 				4F0D1DA818ECB58700C00942 /* Frameworks */,
 				4F0D1DA718ECB58700C00942 /* Products */,
@@ -88,14 +95,11 @@
 		4F0D1DAF18ECB58700C00942 /* DoToDo */ = {
 			isa = PBXGroup;
 			children = (
+				73DE1A9918F4A32D00E23141 /* Singletons */,
 				4F0D1DB818ECB58700C00942 /* DoToDoAppDelegate.h */,
 				4F0D1DB918ECB58700C00942 /* DoToDoAppDelegate.m */,
-				4F0D1DC118ECB58700C00942 /* MainStoryboard_iPhone.storyboard */,
-				F215A72118F34C1A00DD6DD2 /* AddTaskViewController.h */,
-				F215A72218F34C1A00DD6DD2 /* AddTaskViewController.m */,
-				4F0D1DC418ECB58700C00942 /* MainStoryboard_iPad.storyboard */,
-				4F0D1DC718ECB58700C00942 /* DoToDoViewController.h */,
-				4F0D1DC818ECB58700C00942 /* DoToDoViewController.m */,
+				73DE1A9A18F4A33F00E23141 /* Storyboards */,
+				73DE1A9B18F4A34900E23141 /* ViewControllers */,
 				4F0D1DB018ECB58700C00942 /* Supporting Files */,
 			);
 			path = DoToDo;
@@ -113,6 +117,35 @@
 				4F0D1DBF18ECB58700C00942 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		73DE1A9918F4A32D00E23141 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				73B6B7F818F4A48900A2BE2D /* ToDoStore.h */,
+				73B6B7F918F4A48900A2BE2D /* ToDoStore.m */,
+			);
+			name = Singletons;
+			sourceTree = "<group>";
+		};
+		73DE1A9A18F4A33F00E23141 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4F0D1DC118ECB58700C00942 /* MainStoryboard_iPhone.storyboard */,
+				4F0D1DC418ECB58700C00942 /* MainStoryboard_iPad.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		73DE1A9B18F4A34900E23141 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F215A72118F34C1A00DD6DD2 /* AddTaskViewController.h */,
+				F215A72218F34C1A00DD6DD2 /* AddTaskViewController.m */,
+				4F0D1DC718ECB58700C00942 /* DoToDoViewController.h */,
+				4F0D1DC818ECB58700C00942 /* DoToDoViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +220,7 @@
 				4F0D1DBA18ECB58700C00942 /* DoToDoAppDelegate.m in Sources */,
 				4F0D1DC918ECB58700C00942 /* DoToDoViewController.m in Sources */,
 				F215A72318F34C1A00DD6DD2 /* AddTaskViewController.m in Sources */,
+				73B6B7FA18F4A48900A2BE2D /* ToDoStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
