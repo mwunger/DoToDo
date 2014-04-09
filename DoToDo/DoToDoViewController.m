@@ -22,11 +22,11 @@
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
     {
-        [lblDevice setText:@"Hello, nerd! I'm an iPhone"];
+        [lblDevice setText:@"I'm an iPhone"];
     }
     else
     {
-        [lblDevice setText:@"What up, nerd? I'm an iPad"];
+        [lblDevice setText:@"I'm an iPad"];
     }
     
     
